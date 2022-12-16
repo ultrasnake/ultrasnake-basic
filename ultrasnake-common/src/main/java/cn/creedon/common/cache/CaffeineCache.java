@@ -51,13 +51,6 @@ public class CaffeineCache<K, V> implements Cache<K, V> {
                 return getRestTimeInNanos(value);
             }
         });
-        builder.scheduler(Scheduler.forScheduledExecutorService(Executors.newScheduledThreadPool(1)));
-        builder.removalListener(new RemovalListener<K , CacheDataWrapper<V>>() {
-            @Override
-            public void onRemoval(@Nullable K key, @Nullable CacheDataWrapper<V> value, @NonNull RemovalCause cause) {
-                System.out.printf(">>>>>>>>>>>>>> Key %s was removed (%s) Value (%s) %n", key, cause, value);
-            }
-        });
         this.cache = builder.build();
     }
 
