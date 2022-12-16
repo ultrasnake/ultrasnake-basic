@@ -18,10 +18,10 @@
 
     <modules>
         <module>ultrasnake-bom</module>
-
         <module>ultrasnake-common</module>
-
         <module>ultrasnake-ns4j-context</module>
         <module>ultrasnake-ns4j</module>
+
+        <module>ultrasnake-example</module>
     </modules>
 </project>
